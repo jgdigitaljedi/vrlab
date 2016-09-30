@@ -1,0 +1,43 @@
+{
+  "name": "vrlab",
+  "version": "1.0.0",
+  "description": "Austin VR Lab",
+  "main": "index.js",
+  "dependencies": {
+    "bower-installer": "^1.2.0",
+    "font-awesome": "^4.6.3",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-concat": "^0.1.6",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1",
+    "grunt-injector": "^1.0.1",
+    "grunt-ng-annotate": "^2.0.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "load-grunt-tasks": "^3.5.2",
+    "semantic-ui": "^2.2.4",
+    "time-grunt": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgdigitaljedi/vrlab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgdigitaljedi/vrlab/issues"
+  },
+  "homepage": "https://github.com/jgdigitaljedi/vrlab#readme"
+}

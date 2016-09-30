@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vrlab">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/">
+        <title>Austin VR Lab</title>
+        <meta name="description" content="ANGM generator used to rapid prototype 2048 game" />
+        <meta name="author" content="Joey Gauthier" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes" />
+            
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="app/css/normalize.min.css">
+        <link rel="stylesheet" href="app/css/main.css">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+
+        <!-- <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> -->
+    </head>
+    <body ng-cloak>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!--Beginning-->
+        <div ui-view></div>
+        <!--End-->
+
+        <script src="app/js/main.js"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+
+        <!-- injector:js -->
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/bower_components/angular-aria/angular-aria.js"></script>
+        <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="/bower_components/angular-messages/angular-messages.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/app/app.js"></script>
+        <script src="/app/app.config.js"></script>
+        <script src="/app/modules/main/mainModule.js"></script>
+        <!-- endinjector -->
+    </body>
+</html>

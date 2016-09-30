@@ -1,0 +1,27 @@
+{
+  "name": "vrlab",
+  "description": "Austin VR Lab",
+  "main": "index.js",
+  "authors": [
+    "Joey Gauthier <digitaljedi@outlook.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jgdigitaljedi/vrlab",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.3.1",
+    "angular": "^1.5.8",
+    "angular-aria": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-sanitize": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-resource": "^1.5.8"
+  }
+}
