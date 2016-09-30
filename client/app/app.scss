@@ -14,6 +14,18 @@
  $background-color: #535353;
 
 .main-shell {
+	.main-toolbar {
+		background-color: white;
+
+		.vr-toolbar-title {
+			font-weight: bold;
+		}
+
+		.big-nav {
+			background-color: $accent-color;
+			height: 64px;
+		}
+	}
    	.profile-container {
     	height: 100%;
      	font-size: 14px;

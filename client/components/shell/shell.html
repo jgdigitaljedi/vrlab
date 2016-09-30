@@ -15,67 +15,21 @@
 
     </md-content>
   </md-sidenav>
-  <md-toolbar>
+  <md-toolbar class="main-toolbar">
     <div class="md-toolbar-tools">
-      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings">
+      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings" hide-gt-sm>
         <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
       </md-button>
       <h2>
-          <span>vrlab</span>
+          <span class="vr-toolbar-title">Austin VR Labs</span>
         </h2>
       <span flex=""></span>
-      <md-menu>
-        <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
-          <md-icon md-menu-origin md-svg-icon="assets/icons/dots-vertical.svg"></md-icon>
-        </md-button>
-        <md-menu-content width="4">
-          <md-menu-item>
-            <md-button ng-click="showAddDialog($event)">
-              <md-icon md-svg-icon="content:add" md-menu-align-target></md-icon>
-              Add
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button ng-click="redial($event)">
-              <md-icon md-svg-icon="communication:dialpad" md-menu-align-target></md-icon>
-              Redial
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button disabled="disabled" ng-click="checkVoicemail()">
-              <md-icon md-svg-icon="communication:voicemail"></md-icon>
-              Check voicemail
-            </md-button>
-          </md-menu-item>
-          <md-menu-item>
-            <md-button ng-click="toggleNotifications()">
-              <md-icon md-svg-icon="social:notifications{{notificationsEnabled ? '_off' : ''}}"></md-icon>
-              {{notificationsEnabled ? 'Disable' : 'Enable' }} notifications
-            </md-button>
-          </md-menu-item>
-          
-          <md-menu-divider></md-menu-divider>
-          <md-menu-item ng-hide="isLoggedIn()" ui-sref="login">
-            <md-button>
-              <md-icon md-svg-icon="action:input"></md-icon>
-              Login
-            </md-button>
-          </md-menu-item>
-          <md-menu-item ng-hide="isLoggedIn()" ui-sref="signup">
-            <md-button>
-              <md-icon md-svg-icon="action:launch"></md-icon>
-              Signup
-            </md-button>
-          </md-menu-item>
-          <md-menu-item ng-show="isLoggedIn()">
-            <md-button ng-click="logout()">
-              <md-icon md-svg-icon="action:exit_to_app"></md-icon>
-              Logout
-            </md-button>
-          </md-menu-item>
-          
-        </md-menu-content>
-      </md-menu>
+      <span class="big-nav" layout="row" layout-align="end center">
+        <md-button ui-sref="main.home">Home</md-button>
+        <md-button ui-sref="main.products">Products</md-button>
+        <md-button ui-sref="main.contact">Contact</md-button>
+        <md-button ui-sref="main.about">About</md-button>
+      </span>
     </div>
   </md-toolbar>
 </div>
