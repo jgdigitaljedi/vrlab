@@ -1,9 +1,59 @@
 'use strict';
 
-angular.module('vrlabApp').controller('ContactCtrl', ['$scope',
-    function ($scope) {
+angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDialog',
+    function ($scope, $http, $mdDialog) {
         var cc = this;
     
+        cc.sendMail = function (user) {
+			$http.post('/vrmail', {
+				firstName: user.firstName,
+				email: user.email,
+				lastName: user.lastName,
+				phone: user.phone,
+				company: user.company,
+				comment: user.comments
+			}).success(function(res) {
+				if(res.error) {
+					$mdDialog.show({
+					    controller: function DialogController($scope, $mdDialog) {
+					    	$scope.theme = cc.theme;
+		            		$scope.closeDialog = function() {
+		              			$mdDialog.hide();
+		            		};
+		          		},
+					    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+					    parent: angular.element(document.body)
+					});
+				} else {
+					$mdDialog.show({
+					    controller: function DialogController($scope, $mdDialog) {
+					    	$scope.theme = cc.theme;
+		            		$scope.closeDialog = function() {
+		              			$mdDialog.hide();
+		            		};
+		          		},
+					    templateUrl: '/app/contact/modals/success.contact.modal.html',
+					    parent: angular.element(document.body)
+					});
+				}
+				console.log('success');
+			}).error(function() {
+				$mdDialog.show({
+				    controller: function DialogController($scope, $mdDialog) {
+				    	$scope.theme = cc.theme;
+	            		$scope.closeDialog = function() {
+	              			$mdDialog.hide();
+	            		};
+	          		},
+				    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+				    parent: angular.element(document.body)
+				});
+				console.log('error');
+			});
 
+			$scope.closeDialog = function() {
+				$mdDialog.hide();
+			};
+        };
     }
 ]);
