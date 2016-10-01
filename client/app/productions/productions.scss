@@ -1,4 +1,15 @@
 .productions-section {
+	padding-top: 36px;
+	background-color: $primary-color;
 
-	
+	.media-area {
+
+		.slick-container {
+			max-width: 420px;
+		}
+	}
+
+	.logo-central {
+		background-color: white;
+	}
 }
