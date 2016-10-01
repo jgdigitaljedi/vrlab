@@ -21,6 +21,10 @@
 	.main-toolbar {
 		background-color: white;
 
+    .md-toolbar-tools {
+      padding-right: 0 !important;
+    }
+
 		.vr-toolbar-title {
 			font-weight: bold;
 		}
@@ -29,6 +33,16 @@
 			background-color: $accent-color;
 			height: 64px;
 		}
+
+    .social-icons {
+      background-color: $warn-color;
+      height: 64px;
+
+      span {
+        margin: 0 10px;
+        color: white;
+      }
+    }
 	}
 
   .mobile-nav-container {
@@ -52,7 +66,11 @@
      	}
    	}
 }
-
+@media screen and (max-width: 900px) {
+  .social-icons {
+    height: 56px !important;
+  }
+}
 html {
  	-webkit-font-smoothing: antialiased !important;
  	-moz-osx-font-smoothing: grayscale !important;

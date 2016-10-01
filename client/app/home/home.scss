@@ -1,5 +1,25 @@
 .home-section {
 
+	.big-home-image {
+		background: url('./../assets/images/vrlab_gear_purple.jpg');
+		background-color: $primary-color;
+		background-repeat: none;
+		height: calc(100vh - 64px);
 
+		.the-future {
+			font-size: 5em;
+			color: white;
+			font-family: $slab-font;
+			font-weight: bold;
+			@include fade-In(6s);
+		}
+	}
+
+
+	@media screen and (width: 900px) {
+		.big-home-image {
+			height: calc(100vh - 48px);
+		}
+	}
 	
 }
