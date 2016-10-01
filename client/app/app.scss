@@ -14,6 +14,10 @@
  $background-color: #535353;
 
 .main-shell {
+
+  md-icon {
+    margin-bottom: 4px;
+  }
 	.main-toolbar {
 		background-color: white;
 
@@ -26,6 +30,19 @@
 			height: 64px;
 		}
 	}
+
+  .mobile-nav-container {
+
+    .mobile-nav-head {
+
+      h2 {
+        color: white;          
+      }
+    }
+    .mobile-nav {
+
+    }
+  }
    	.profile-container {
     	height: 100%;
      	font-size: 14px;
@@ -115,6 +132,10 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'contact/contact.scss';
 @import 'home/home.scss';
 @import 'main/main.scss';
+@import 'productions/productions.scss';
+@import 'products/products.scss';
+@import 'tours/tours.scss';
 // endinjector

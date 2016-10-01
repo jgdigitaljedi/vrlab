@@ -121,7 +121,7 @@ angular.module('vrlabApp', [
            .primaryPalette('customPrimary')
            .accentPalette('customAccent')
            .warnPalette('customWarn')
-           .backgroundPalette('customBackground')
+           .backgroundPalette('customBackground');
 })
 .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
