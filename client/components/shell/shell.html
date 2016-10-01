@@ -9,8 +9,7 @@
           <div class="profile-email">{{ getCurrentUser().email }}</div>
         </div>
       </div> -->
-      <h2>Austin VR Lab</h2>
-      
+      <h2>Austin VR Lab</h2>      
     </md-toolbar>
     <md-content layout-padding>
       <md-list class="mobile-nav">
@@ -49,14 +48,15 @@
   </md-sidenav>
   <md-toolbar class="main-toolbar">
     <div class="md-toolbar-tools">
-      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings" hide-gt-sm>
+      <md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings" hide-gt-md>
         <md-icon md-svg-icon="assets/icons/menu.svg"></md-icon>
       </md-button>
       <h2>
-          <span class="vr-toolbar-title">Austin VR Labs</span>
+          <!-- <span class="vr-toolbar-title">Austin VR Labs</span> -->
+          <img src="../../assets/images/log0_cleaned.png" class="logo" />
         </h2>
       <span flex=""></span>
-      <span class="big-nav" layout="row" layout-align="end center" hide-sm hide-xs>
+      <span class="big-nav" layout="row" layout-align="end center" hide-md hide-sm hide-xs>
         <md-button ui-sref="main.home">
           <md-icon md-svg-icon="action:home"></md-icon>
           Home
