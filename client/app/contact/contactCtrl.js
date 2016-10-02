@@ -5,7 +5,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
         var cc = this;
     
         cc.sendEmail = function (user) {
-			$http.post('/vrmail', {
+			$http.post('/api/proxy/vrmail', {
 				firstName: user.firstName,
 				email: user.email,
 				lastName: user.lastName,
@@ -32,7 +32,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
 		              			$mdDialog.hide();
 		            		};
 		          		},
-					    templateUrl: '/app/contact/modals/success.contact.view.html',
+					    templateUrl: '/app/contact/modals/contact.success.view.html',
 					    parent: angular.element(document.body)
 					});
 				}

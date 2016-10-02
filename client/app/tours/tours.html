@@ -1,3 +1,19 @@
 <section class="tours-section">
-	<h1>tours</h1>
+	<div  layout="row" layout-align="center center">
+		<div layout="row" layout-align="center center" class="tour-container">
+			<div layout="column" class="tour-info" layout-align="center center" flex="50">
+				<h3 md-accent>Austin VR Lab Experience</h3>
+				<p>2 hour | $100.00</p>
+			</div>
+			<div layout="column" class="tour-details" layout-align="center start" flex="50">
+				<span>One of our VR operators will take you on a guided tour of VR on the HTC Vive or Oculus while answering any 	of your VR questions.
+				</span><br>
+				<span>This session is good for up to 4 people.</span>
+			</div>
+		</div>
+	</div>
+	<div layout="row" layout-align="center center">
+		<md-button ng-click="tc.bookIt()">Book It!</md-button>
+	</div>
+	<md-divider ng-show="tc.showBooking"></md-divider>
 </section>

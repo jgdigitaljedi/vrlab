@@ -1,8 +1,23 @@
 .contact-section {
 
+	.contact-title-area {
+		background-color: $primary-color;
+
+		// margin-bottom: 20px;
+		// padding-top: 20px;
+
+		p {
+			font-size: 5em;
+			font-family: $slab-font;
+			margin: 20px;
+			color: white;
+			font-weight: bold;
+		}
+	}
+
 	.contact-form {
-		padding-top: 60px;
-		height: calc(100vh - 64px);
+		min-height: calc(100vh - 64px);
+		height: 100%;
 		background-color: white !important;
 
 		.contact-header {
@@ -31,8 +46,16 @@
 		font-weight: bold;
 	}
 
+	md-dialog-content {
+		background-color: white;
+	}
+
 	.success-icon {
 		width: 100%;
 		text-align: center;
+	}
+
+	.md-actions {
+		background-color: $accent-color;
 	}
 }
