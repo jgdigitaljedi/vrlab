@@ -1,7 +1,7 @@
 <section class="contact-section">
-	<md-content layout-padding layout="row" layout-align="center center">
+	<div class="contact-form" layout-padding layout="row" layout-align="center center">
 	    <form name="userForm" class="contact-form">
-	  		<md-content layout-padding class="trans-back height-fix">
+	  		<div layout-padding class="trans-back height-fix">
 	      		<div layout>
 			        <md-input-container class="half-width">
 			          	<label class="accent-label">First name</label>
@@ -28,19 +28,21 @@
 			            </div>
 			    	</md-input-container>
 			    </div>
-			    <md-input-container class="half-width">
-		      		<label class="accent-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone</label>
-		      		<input ng-model="user.phone" name="phone" type="phone" >
-		    	</md-input-container>
-			    <md-input-container flex>
-			        <label class="accent-label"><i class="fa fa-comment"></i> Comments</label>
-			        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" 
-			        	></textarea>
-			        <div ng-messages="userForm.comments.$error">
-			            <div ng-message="required">Why are you contacting me?</div>
-			        </div>
-			    </md-input-container>
-			</md-content>
+			    <div layout>
+				    <md-input-container class="half-width">
+			      		<label class="accent-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone (optional)</label>
+			      		<input ng-model="user.phone" name="phone" type="phone" >
+			    	</md-input-container>
+				    <md-input-container class="half-width" flex>
+				        <label><i class="fa fa-comment"></i> Message</label>
+				        <textarea ng-model="user.comments" columns="1" md-maxlength="500" required name="comments" 
+				        	></textarea>
+				        <div ng-messages="userForm.comments.$error">
+				            <div ng-message="required">Why are you contacting us?</div>
+				        </div>
+				    </md-input-container>
+				</div>
+			</div>
 			<div layout layout-align="center center">
 				<md-button ng-click="cc.sendEmail(user)">
 					Submit &nbsp;
@@ -48,5 +50,5 @@
 				</md-button>
 			</div>
 	    </form>
-	</md-content>
+	</div>
 </section>

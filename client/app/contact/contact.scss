@@ -1,8 +1,38 @@
 .contact-section {
 
-	md-content {
+	.contact-form {
+		padding-top: 60px;
+		height: calc(100vh - 64px);
 		background-color: white !important;
+
+		.contact-header {
+			font-weight: bold;
+		}
+		.contact-form {
+			width: 60%;
+		}
+		.half-width {
+			width: 50%;
+		}
+		.height-fix {
+			min-height: 280px;
+		}
 		
 	}
 	
+}
+
+
+.email-modal {
+
+	md-toolbar {
+		background-color: $warn-color;
+		color: white;
+		font-weight: bold;
+	}
+
+	.success-icon {
+		width: 100%;
+		text-align: center;
+	}
 }

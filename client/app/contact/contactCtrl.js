@@ -4,7 +4,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
     function ($scope, $http, $mdDialog) {
         var cc = this;
     
-        cc.sendMail = function (user) {
+        cc.sendEmail = function (user) {
 			$http.post('/vrmail', {
 				firstName: user.firstName,
 				email: user.email,
@@ -21,7 +21,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
 		              			$mdDialog.hide();
 		            		};
 		          		},
-					    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+					    templateUrl: '/app/contact/modals/failure.contact.view.html',
 					    parent: angular.element(document.body)
 					});
 				} else {
@@ -32,7 +32,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
 		              			$mdDialog.hide();
 		            		};
 		          		},
-					    templateUrl: '/app/contact/modals/success.contact.modal.html',
+					    templateUrl: '/app/contact/modals/success.contact.view.html',
 					    parent: angular.element(document.body)
 					});
 				}
@@ -45,7 +45,7 @@ angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDia
 	              			$mdDialog.hide();
 	            		};
 	          		},
-				    templateUrl: '/app/contact/modals/failure.contact.modal.html',
+				    templateUrl: '/app/contact/modals/failure.contact.view.html',
 				    parent: angular.element(document.body)
 				});
 				console.log('error');
