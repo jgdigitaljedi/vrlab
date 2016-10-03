@@ -14,18 +14,52 @@
 			</div>
 		</div>
 		<div layout="row" layout-align="center center">
-			<md-button ng-click="tc.bookIt()">Book It!</md-button>
+			<md-button ng-click="tc.bookIt()">Let's Do It!</md-button>
 		</div>
 	</div>
-	<md-divider ng-show="tc.showBooking"></md-divider>
-	<div class="booking-details" layout="row" layout-align="center center" ng-show="tc.showBooking">
-		<md-input-container>
-	       <label>Select a Date and Time</label>
-	       <input mdc-datetime-picker date="true" time="true" type="text" id="time" short-time="true"
-              	placeholder="Tour Date/Time"
-             	min-date="tc.minDate"
-              	format="MM/DD/YYYY hh:mm a"
-              	ng-model="tc.tourDate">
-		</md-input-container>
+	<div ng-slide-down="tc.showBooking" duration="1.2" lazy-render>
+		<div class="booking-details" layout="row" layout-align="center center">
+			<form name="tour" class="booking-form" layout="column" layout-align="center center" ng-submit="tc.bookTour(tour.$valid)">
+				<md-input-container>
+			       <label>Select a Date and Time</label>
+			       <input mdc-datetime-picker date="true" time="true" type="text" id="time" short-time="true"
+			       		name="date"
+		              	placeholder="Tour Date/Time"
+		             	min-date="tc.minDate"
+		              	format="MM/DD/YYYY hh:mm a"
+		              	ng-model="tc.tour.date" required>
+		            <div ng-messages="tour.date.$error">
+		               	<div ng-message="required">When would you like a tour?</div>
+		            </div>
+				</md-input-container>
+				<md-input-container>
+					<label for="name"> Name</label>
+					<input name="name" required ng-model="tc.tour.name" />
+					<div ng-messages="tour.name.$error">
+					   	<div ng-message="required">Who are you?</div>
+					</div>
+				</md-input-container>
+				<md-input-container>
+					<label for="phone"> Phone #</label>
+					<input name="phone" required ng-model="tc.tour.phone" />
+					<div ng-messages="tour.phone.$error">
+					   	<div ng-message="required">We might need to call you!</div>
+					</div>
+				</md-input-container>
+				<md-input-container>
+					<label for="email"> Email</label>
+					<input name="email" required ng-model="tc.tour.email" />
+					<div ng-messages="tour.email.$error">
+					   	<div ng-message="required">We might need to email you!</div>
+					</div>
+				</md-input-container>
+				<span class="required-fields">*all fields required</span>
+				<md-button type="submit"> Book It!</md-button>
+			</form>
+		</div>
+		<div layout="row" layout-align="center center" class="tour-disclaimer">
+			Please note that tour bookings are not final until you receive a confirmation email or phone call 
+			from someone at Austin VR Lab. 
+		</div>
 	</div>
 </section>

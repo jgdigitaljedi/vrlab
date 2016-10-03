@@ -9,7 +9,8 @@ angular.module('vrlabApp', [
     'ui.router',
     'ngMaterial',
     'slick',
-    'ngMaterialDatePicker'
+    'ngMaterialDatePicker',
+    'ng-slide-down'
 ])
 .config(function ($mdIconProvider) {
     $mdIconProvider

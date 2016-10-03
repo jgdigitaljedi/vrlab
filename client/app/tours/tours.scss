@@ -22,8 +22,18 @@
 
 	.booking-details {
 		padding-top: 30px;
+
+		.required-fields {
+			font-size: .8em;
+			font-style: italic;
+		}
 	}
 	
+	.tour-disclaimer {
+		margin-top: 20px;
+		font-style: italic;
+		font-weight: bold;
+	}
 }
 
 // overriding date time picker styles
