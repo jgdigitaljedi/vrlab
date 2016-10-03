@@ -172,7 +172,7 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 
 
 .main-view.ng-enter {
- @include fade-In(1.2s);
+ @include fade-In(1s);
 }
 
 

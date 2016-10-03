@@ -62,10 +62,10 @@
 					    	</md-input-container>
 					    </div>
 					    <div class="input-div">
-						    <md-input-container flex>
+						    <md-input-container flex style="width: 320px;">
 						        <label><i class="fa fa-comment"></i> Message</label>
-						        <textarea ng-model="cc.user.comments" columns="1" md-maxlength="500" 
-						        	required name="comments"></textarea>
+						        <textarea ng-model="cc.user.comments" columns="1" md-maxlength="140" 
+						        	maxlength="140" required name="comments"></textarea>
 						        <div ng-messages="userForm.comments.$error">
 						            <div ng-message="required">Why are you contacting us?</div>
 						        </div>

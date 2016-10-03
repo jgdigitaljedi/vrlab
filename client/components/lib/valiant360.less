@@ -1,0 +1,97 @@
+/*!
+ * Valiant360 panorama video player jquery plugin
+ *
+ * Copyright (c) 2014 Charlie Hoey <@flimshaw>
+ *
+ * Released under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ */
+@import 'font-awesome.less';
+
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+
+.box-sizing (@sizing) {
+	box-sizing: @sizing;
+	-moz-box-sizing: @sizing;
+	-webkit-box-sizing: @sizing;
+}
+
+.Valiant360_default {
+	position: relative;
+	canvas {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+	}
+	.controlsWrapper {
+		position: absolute;
+		height: 0;
+		width: 100%;
+		bottom:0;
+		overflow:hidden;
+		.transition(all .5s ease-in-out);
+	}
+	.controls {
+		overflow: hidden;
+		position: absolute;
+		bottom: 0;
+		background-color:rgba(0,0,0,.75);
+		height: 40px;
+		width: 100%;
+		.box-sizing(border-box);
+		font-size: 50%;
+		padding: 0 10px;
+		.button {
+			width: 50px;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			line-height: 40px;
+			padding: 0 .1em;
+			opacity: .5;
+			font-size: 3em;
+			color: #fff;
+			text-decoration: none;
+			.transition(all .25s ease-in-out);
+		}
+		.button:hover {
+			opacity: 1;
+		}
+		.fullscreenButton {
+			float: right;
+		}
+	}
+}
+
+.Valiant360_default:hover {
+	.controlsWrapper {
+		height: 48px;
+	}
+}
+
+.Valiant360_default.fullscreen {
+	width: 100%!important;
+	height: 100%!important;
+}
+
+.Valiant360_default .valiant-progress-bar {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+}
+.Valiant360_default .valiant-progress-bar:hover {
+    cursor: pointer;
+}
+.Valiant360_default .valiant-progress-bar > div {
+    height: 100%;
+    float:left;
+    background-color: #444;
+}
+.Valiant360_default .valiant-progress-bar > div:first-child {
+    background-color: red;
+}
