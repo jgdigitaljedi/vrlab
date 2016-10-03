@@ -1,16 +1,26 @@
 .productions-section {
-	padding-top: 36px;
-	background-color: $primary-color;
+	background-color: $warn-color;
 
 	.media-area {
+		padding-top: 36px;
 
 		.slick-container {
 			max-width: 420px;
 			padding-bottom: 36px;
+
+
 		}
 	}
 
 	.logo-central {
 		background-color: white;
 	}
+}
+
+.slick-dots li.slick-active button:before {
+	color: $accent-color;
+}
+
+.slick-dots li button:before {
+	color: white;
 }

@@ -17,6 +17,8 @@ angular.module('vrlabApp')
       return route === $location.path();
     };
 
+    console.log('sadfasdf', $location.path());
+
     $scope.toggleLeft = function() {
       $mdSidenav('left').toggle();
     };

@@ -6,7 +6,7 @@
 	</div>
 	<div layout="row" layout-align="center center">
 		<div class="contact-form" layout-padding layout="row" layout-sm="column" layout-xs="column" layout-align="center start" flex>
-			<div layout="column" layout-sm="column" layout-xs="column" class="contact-column" flex="50">
+			<div layout="column" layout-sm="column" layout-xs="column" class="contact-column" flex-offset-gt-sm="15" flex="35">
 				<div class="angled-flag">
 					Contact
 				</div>
@@ -25,13 +25,13 @@
 					<div><i class="fa fa-instagram"></i> /austinvrlab</div>
 				</div>
 			</div>
-			<div layout="column" class="contact-column" flex="50">
+			<div layout="column" class="contact-column" flex="35">
 				<div class="angled-flag">
 					Inquiry
 				</div>
 			    <form name="userForm" class="contact-form" ng-click="cc.sendEmail(userForm.$valid)">
 			  		<div layout-padding class="trans-back height-fix">
-			      		<div layout>
+			      		<div class="input-div">
 					        <md-input-container>
 					          	<label class="accent-label">Name</label>
 					          	<input required name="firstName" ng-model="cc.user.firstName" >
@@ -40,13 +40,13 @@
 					            </div>
 					        </md-input-container>
 			      		</div>
-			      		<div layout>
+			      		<div class="input-div">
 			        		<md-input-container>
 			            		<label class="accent-label"><i class="fa fa-building"></i> Company (optional)</label>
 			            		<input ng-model="cc.user.company" >
 			          		</md-input-container>
 			          	</div>
-			          	<div layout>
+			          	<div class="input-div">
 					    	<md-input-container>
 					      		<label class="accent-label"><i class="fa fa-envelope"></i> Email</label>
 					      		<input ng-model="cc.user.email" required name="email" type="email" >
@@ -55,13 +55,13 @@
 					            </div>
 					    	</md-input-container>
 					    </div>
-					    <div layout>
+					    <div class="input-div">
 						    <md-input-container>
 					      		<label class="accent-label"><i class="fa fa-phone" aria-hidden="true"></i> Phone (optional)</label>
 					      		<input ng-model="cc.user.phone" name="phone" type="phone" >
 					    	</md-input-container>
 					    </div>
-					    <div layout>
+					    <div class="input-div">
 						    <md-input-container flex>
 						        <label><i class="fa fa-comment"></i> Message</label>
 						        <textarea ng-model="cc.user.comments" columns="1" md-maxlength="500" 
@@ -72,7 +72,7 @@
 						    </md-input-container>
 						</div>
 					</div>
-					<div layout layout-align="center center">
+					<div>
 						<md-button type="submit">
 							Submit &nbsp;
 							<md-icon md-svg-icon="content:send"></md-icon>

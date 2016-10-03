@@ -13,7 +13,26 @@
  $warn-color: #1a0315;
  $background-color: #535353;
 
+ .title-area {
+  background-color: $primary-color;
+
+  // margin-bottom: 20px;
+  // padding-top: 20px;
+
+  p {
+    font-size: 5em;
+    font-family: $slab-font;
+    margin: 20px;
+    color: white;
+    font-weight: bold;
+  }
+ }
+
 .main-shell {
+
+  md-list-item {
+    padding-left : 36px;
+  }
 
   md-icon {
     margin-bottom: 4px;
@@ -152,6 +171,9 @@ $prefix:'-moz-', '-webkit-', '-o-', '-ms-', '';
 }
 
 
+.main-view.ng-enter {
+ @include fade-In(1.2s);
+}
 
 
 // Component styles are injected through grunt
