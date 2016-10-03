@@ -19,16 +19,36 @@
 		min-height: calc(100vh - 64px);
 		height: 100%;
 		background-color: white !important;
+		max-width: 1200px;
+
+		.contact-column {
+			min-width: 500px;
+
+			.social-info, .phone {
+				margin-top: 40px;
+			}
+		}
+
+		.angled-flag {
+			background-color: $warn-color;
+			font-weight: bold;
+			padding-left: 8px;
+			font-size: 1.7em;
+			color: white;
+			width: 200px;
+			height: 34px;
+			-webkit-clip-path: polygon(75% 100%, 0 100%, 0 0, 100% 0);
+			clip-path: polygon(75% 100%, 0 100%, 0 0, 100% 0);
+		}
 
 		.contact-header {
 			font-weight: bold;
 		}
-		.contact-form {
-			width: 60%;
+		
+		textarea {
+			// max-width: 400px;
 		}
-		.half-width {
-			width: 50%;
-		}
+
 		.height-fix {
 			min-height: 280px;
 		}

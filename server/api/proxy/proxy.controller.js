@@ -25,7 +25,7 @@ exports.sendMail = function(req, res) {
     transporter.sendMail({
         from: process.env.JYAHOOUSER,
         to: process.env.JPERSONALEMAIL,
-        subject: 'Message from ' + data.firstName + ' ' + data.lastName + company,
+        subject: 'Message from ' + data.firstName + company,
         text: 'Phone#: ' + data.phone + ' \n ' + data.comment
     }, function(error, response){  //callback
 			if(error) {
