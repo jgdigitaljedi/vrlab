@@ -1,5 +1,54 @@
 .tours-section {
 
+	.tour-top {
+		background-color: $primary-color;
+		color: white;
+		padding: 30px 0;
 
+		.tour-details {
+			max-width: 500px;
+		}
+
+		button {
+			background-color: $accent-color;
+			color: $warn-color;
+			font-weight: bold;
+			margin-top: 20px;
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
+
+	.booking-details {
+		padding-top: 30px;
+	}
 	
+}
+
+// overriding date time picker styles
+.dtp-header {
+	background: $warn-color !important;
+}
+
+.dtp-date {
+	background: $primary-color !important;
+}
+
+.dtp-picker-days {
+
+	.selected {
+		background: $accent-color !important;
+	}
+}
+
+.dtp-picker-datetime {
+
+	.selected {
+		background: $accent-color !important;
+	}
+}
+
+.dtp-hand.on {
+	background: $accent-color !important;
 }

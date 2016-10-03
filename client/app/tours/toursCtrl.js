@@ -8,5 +8,7 @@ angular.module('vrlabApp').controller('ToursCtrl', ['$scope',
         tc.bookIt = function () {
         	tc.showBooking = !tc.showBooking;
         };
+
+        tc.minDate = moment().add(2, 'hours').format('MM/DD/YYYY hh:mm a');
     }
 ]);

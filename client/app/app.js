@@ -8,7 +8,8 @@ angular.module('vrlabApp', [
     'ngMessages',
     'ui.router',
     'ngMaterial',
-    'slick'
+    'slick',
+    'ngMaterialDatePicker'
 ])
 .config(function ($mdIconProvider) {
     $mdIconProvider
@@ -122,7 +123,7 @@ angular.module('vrlabApp', [
            .accentPalette('customAccent')
            .warnPalette('customWarn')
            .backgroundPalette('customBackground');
-        $mdThemingProvider.enableBrowserColor({theme: 'default', palette: 'accent'});
+        // $mdThemingProvider.enableBrowserColor({theme: 'default', palette: 'accent'});
 })
 .factory('authInterceptor', function ($rootScope, $q, $cookieStore, $location) {
     return {
