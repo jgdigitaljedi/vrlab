@@ -4,6 +4,7 @@
 		background-color: $warn-color;
 		color: white;
 		padding: 30px 0;
+		padding: 8px;
 
 		.tour-details {
 			max-width: 500px;
@@ -62,4 +63,13 @@
 
 .dtp-hand.on {
 	background: $accent-color !important;
+}
+
+@media screen and (max-width: 635px) {
+	.tours-section {
+
+		.title-area {
+			font-size: 0.5em !important;
+		}
+	}
 }
