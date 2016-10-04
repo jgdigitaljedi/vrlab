@@ -3,38 +3,6 @@
 
 	.media-area {
 		padding: 36px 0 42px;
-
-		// .valiantContainer {
-
-		// 	.controlsWrapper {
-		// 		background-color: $primary-color;
-		// 		height: 22px;
-		// 		margin-top: -4px;
-		// 		.controls {
-		// 			padding: 2px 4px;
-		// 			a {
-		// 				color: $accent-color !important;
-		// 				margin-right: 16px;
-		// 				text-decoration: none;
-		// 			}					
-		// 		}
-		// 	}
-		// }
-
-		// .transition (@transition) {
-		// 	-webkit-transition: @transition;
-		// 	-moz-transition:    @transition;
-		// 	-ms-transition:     @transition;
-		// 	-o-transition:      @transition;
-		// }
-
-		// .box-sizing (@sizing) {
-		// 	box-sizing: @sizing;
-		// 	-moz-box-sizing: @sizing;
-		// 	-webkit-box-sizing: @sizing;
-		// }
-
-
 	}
 
 	.logo-central {
@@ -63,7 +31,7 @@
 		width: 100%;
 		bottom:0;
 		overflow:hidden;
-		// .transition(all .5s ease-in-out);
+		transition: all .5s ease-in-out;
 	}
 	.controls {
 		overflow: hidden;
@@ -72,7 +40,6 @@
 		background-color:rgba(0,0,0,.75);
 		height: 40px;
 		width: 100%;
-		// .box-sizing(border-box);
 		box-sizing: border-box;
 		font-size: 50%;
 		padding: 0 10px;
@@ -87,7 +54,7 @@
 			font-size: 3em;
 			color: #fff;
 			text-decoration: none;
-			// .transition(all .25s ease-in-out);
+			transition: all .25s ease-in-out;
 		}
 		.button:hover {
 			opacity: 1;
