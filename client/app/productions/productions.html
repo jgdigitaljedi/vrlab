@@ -3,14 +3,14 @@
 		<p>Productions</p>
 	</div>
 	<div layout="row" class="media-area" layout-align="center center">
-		<div class="slick-container">
-		<div class="valiantContainer" data-video-src="/assets/video/linez_360_video.mp4" style="width: 480px; height: 270px;"></div>
+		<!-- <div class="slick-container"> -->
+		<div class="valiantContainer" data-video-src="/assets/video/linez_360_video.mp4" ng-style="{'width': prc.vidDims.width, 'height': prc.vidDims.height}"></div>
 			<!-- <slick infinite=true slides-to-show=1 slides-to-scroll=1 dots=true autoplay=true>
 				<div ng-repeat="image in prc.carosel">
 					<img ng-src="../../assets/images/carosel/{{image}}" style="max-width: 420px;"/></div>
 				</div>
 			</slick> -->
-		</div>
+		<!-- </div> -->
 	</div>
 	<div layout="row" class="logo-central" layout-align="center center">
 		<md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"
