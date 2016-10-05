@@ -8,5 +8,11 @@ angular.module('vrlabApp').controller('MainCtrl', ['$scope', '$state',
         	$state.go('main.home');
         }
 
+        // (function($) {
+        //     $.fn.hasScrollBar = function() {
+        //         return $(document).height() > $(window).height();
+        //     };
+        // })(jQuery);
+
     }
 ]);

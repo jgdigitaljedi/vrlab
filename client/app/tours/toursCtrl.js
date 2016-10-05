@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('vrlabApp').controller('ToursCtrl', ['$scope',
-    function ($scope) {
+angular.module('vrlabApp').controller('ToursCtrl', ['$scope', '$timeout', 'HelperService',
+    function ($scope, $timeout, HelperService) {
         var tc = this;
         tc.showBooking = false;
+        $timeout(function () {HelperService.hasScrollBar();});
     
         tc.bookIt = function () {
         	tc.showBooking = !tc.showBooking;

@@ -1,8 +1,9 @@
 'use strict';
 
-angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDialog',
-    function ($scope, $http, $mdDialog) {
+angular.module('vrlabApp').controller('ContactCtrl', ['$scope', '$http', '$mdDialog', '$timeout', 'HelperService',
+    function ($scope, $http, $mdDialog, $timeout, HelperService) {
         var cc = this;
+        $timeout(function () {HelperService.hasScrollBar();});
     
         cc.sendEmail = function (valid) {
 

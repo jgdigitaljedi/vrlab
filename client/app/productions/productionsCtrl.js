@@ -1,8 +1,9 @@
 'use strict';
 
-angular.module('vrlabApp').controller('ProductionsCtrl', ['$scope', '$timeout', '$compile',
-    function ($scope, $timeout, $compile) {
+angular.module('vrlabApp').controller('ProductionsCtrl', ['$scope', '$timeout', '$compile', 'HelperService',
+    function ($scope, $timeout, $compile, HelperService) {
         var prc = this;
+        
         var valiantProps = {
         	crossOrigin: 'anonymous',   // valid keywords: 'anonymous' or 'use-credentials'
         	clickAndDrag: false,    // use click-and-drag camera controls
@@ -39,6 +40,7 @@ angular.module('vrlabApp').controller('ProductionsCtrl', ['$scope', '$timeout', 
 
         prc.proImages = ['up.jpg', 'getter.jpg', 'party.jpg'];
         prc.proVids = ['linez_360_video'];
+        $timeout(function () {HelperService.hasScrollBar();}, 50);
 
         prc.playerSwitch = function (type, source) {
         	console.log('source', source);
