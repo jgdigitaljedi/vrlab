@@ -2,15 +2,20 @@
 	<div layout="row" layout-align="center center" class="title-area">
 		<p>Productions</p>
 	</div>
-	<div layout="row" class="media-area" layout-align="center center">
-		<!-- <div class="slick-container"> -->
-		<div class="valiantContainer" data-video-src="/assets/video/linez_360_video.mp4" ng-style="{'width': prc.vidDims.width, 'height': prc.vidDims.height}"></div>
-			<!-- <slick infinite=true slides-to-show=1 slides-to-scroll=1 dots=true autoplay=true>
-				<div ng-repeat="image in prc.carosel">
-					<img ng-src="../../assets/images/carosel/{{image}}" style="max-width: 420px;"/></div>
-				</div>
-			</slick> -->
-		<!-- </div> -->
+	<div layout="row" layout-md="column" layout-sm="column" layout-xs="column" class="media-area" layout-align="center center">
+		<div class="vid-thumb-container" layout-align="center center" layout-wrap>
+			<div ng-repeat="image in prc.proVids">
+				<img ng-src="/assets/images/vidThumbs/{{image}}.png" class="vid-thumb" ng-click="prc.playerSwitch('video', image)" />
+			</div>
+		</div>
+		<div class="center-area" ng-style="{'width': prc.vidDims.width}" ng-class="{'center-text': prc.state.source === 'image'}">
+			<div class="valiantContainer" data-video-src="/assets/video/linez_360_video.mp4" ng-style="{'width': prc.vidDims.width, 'height': prc.vidDims.height}"></div>
+		</div>
+		<div class="image-thumb-container" layout-align="center center" layout-wrap layout="row">
+			<div ng-repeat="image in prc.proImages">
+				<img ng-src="/assets/images/proImages/{{image}}" class="image-thumb" ng-click="prc.playerSwitch('image', image)" />
+			</div>
+		</div>
 	</div>
 	<div layout="row" class="logo-central" layout-align="center center">
 		<md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="3" md-cols-gt-md="3"

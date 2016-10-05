@@ -3,7 +3,7 @@
 angular.module('vrlabApp')
   .controller('ShellCtrl', function ($mdSidenav, $mdDialog, $scope, $location, Auth) {
 
-    
+    $scope.currentView = 'home';
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
     $scope.getCurrentUser = Auth.getCurrentUser;
@@ -14,11 +14,17 @@ angular.module('vrlabApp')
     };
 
     $scope.isActive = function(route) {
+      console.log('route', route);
       return route === $location.path();
     };
 
     $scope.toggleLeft = function() {
       $mdSidenav('left').toggle();
+    };
+
+    $scope.highlightActive = function (which, mobile) {
+      $scope.currentView = which;
+      if (mobile) $scope.toggleLeft();
     };
 
     var originatorEv;

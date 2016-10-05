@@ -70,6 +70,7 @@
 	}
 
   .mobile-nav-container {
+    background-color: white;
 
     .mobile-nav-head {
 
@@ -81,6 +82,9 @@
 
     }
   }
+  md-content {
+    background-color: white;
+  }
    	.profile-container {
     	height: 100%;
      	font-size: 14px;
@@ -90,6 +94,11 @@
      	}
    	}
 }
+
+.nav-active {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 900px) {
   .social-icons {
     height: 56px !important;

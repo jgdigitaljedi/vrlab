@@ -3,19 +3,37 @@
 
 	.media-area {
 		padding: 36px 0 42px;
+
+		.image-thumb-container {
+			margin-left: 40px;
+			width: 300px;
+
+			.image-thumb {
+				max-width: 60px;
+				margin: 20px;
+				cursor: pointer;
+			}
+		}
+
+		.vid-thumb-container {
+			margin-right: 40px;
+			width: 300px;
+
+			.vid-thumb {
+				max-width: 60px;
+				margin: 20px;
+				cursor: pointer;
+			}
+		}
 	}
 
 	.logo-central {
 		background-color: white;
 	}
-}
 
-.slick-dots li.slick-active button:before {
-	color: $accent-color;
-}
-
-.slick-dots li button:before {
-	color: white;
+	// .valiantContainer {
+	// 	text-align: center;
+	// }
 }
 
 .Valiant360_default {
@@ -37,7 +55,7 @@
 		overflow: hidden;
 		position: absolute;
 		bottom: 0;
-		background-color:rgba(0,0,0,.75);
+		background-color: rgba(0,0,0,0.75);
 		height: 40px;
 		width: 100%;
 		box-sizing: border-box;
@@ -91,4 +109,8 @@
 }
 .Valiant360_default .valiant-progress-bar > div:first-child {
     background-color: red;
+}
+
+.center-text {
+	text-align: center;
 }
