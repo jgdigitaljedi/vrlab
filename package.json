@@ -23,6 +23,7 @@
     "nodemailer-smtp-transport": "^2.7.2",
     "passport": "~0.2.0",
     "passport-local": "~0.1.6",
+    "request": "^2.75.0",
     "serve-favicon": "~2.0.1"
   },
   "devDependencies": {
